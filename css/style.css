@@ -1,0 +1,170 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #d1d5db;
+    padding: 0.8em;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+.logo-text {
+    margin-left: 5px;
+    font-weight: bold;
+}
+.nav-link {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.nav-links {
+    display: flex;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+}
+
+/* Main content */
+
+.hero-section {
+    position: relative;
+    background-image: url("/images/hero-image.png");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    padding: 2em;
+    color: white;
+    min-height: 400px;
+}
+
+.hero-texts {
+    position: absolute;
+    bottom: 30px;
+    padding-right: 2em;
+}
+
+.articles {
+   display: grid;
+   grid-template-columns: auto 1fr auto;
+   grid-template-areas: 
+        ". blogone ."
+        ". blogtwo ."
+        ". blogthree ."
+        ". blogfour ."
+        ". blogfive ."
+        ". blogsix .";
+    margin-top: 1.5em;
+}
+
+.blogone {
+   grid-area: blogone;
+}
+.blogtwo {
+   grid-area: blogtwo;
+}
+.blogthree {
+    grid-area: blogthree;
+}
+.blogfour {
+    grid-area: blogfour;
+}
+.blogfive {
+    grid-area: blogfive;
+}
+.blogsix {
+    grid-area: blogsix;
+}
+
+
+article {
+    border-radius: 0.2em;
+    background-color: white;
+    height: auto;
+    padding: 2em;
+}
+
+article img {
+    width: 100%;
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: black;
+    padding: .5em;
+}
+
+footer h3 {
+    margin-bottom: 0;
+}
+
+footer p {
+    margin-top: .2em;
+}
+
+@media(min-width: 500px) {
+      .articles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+                "blogone blogtwo"
+                "blogthree blogfour"
+                "blogfive blogsix";
+    }
+     .navbar {
+        border: 2px solid black;
+    }
+}
+
+@media (min-width: 970px) {
+
+    .articles {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-areas: 
+        "blogone blogtwo blogthree"
+        "blogfour blogfive blogsix";
+    }
+    .navbar {
+        border: 2px solid red;
+    }
+    .hero-section {
+        min-height: 600px;
+    }
+
+    .hero-texts {
+        bottom: 50px;
+        /* padding-right: 40em; */
+        
+   }
+   .hero-title {
+    font-size: 3.5rem;
+   }
+   .hero-description {
+    font-size: 1rem;
+    width: 100vh;
+   }
+}
