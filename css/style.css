@@ -8,11 +8,16 @@ body {
 /* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     margin: 0 auto;
     border: 1px solid #d1d5db;
     padding: 0.8em;
+    position: fixed;
+    /* width: 100vw; */
+    min-width: 100vw;
+    background-color: white;
+    z-index: 1000;
 }
 .logo {
     display: flex;
@@ -35,6 +40,7 @@ body {
 }
 .nav-links {
     display: flex;
+    margin-right: 40px;
 }
 
 a {
@@ -166,5 +172,10 @@ footer p {
    .hero-description {
     font-size: 1rem;
     width: 100vh;
+   }
+
+   main {
+    width: 90%;
+    margin: 0 auto;
    }
 }
