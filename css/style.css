@@ -56,9 +56,11 @@ ul {
 .hero-section {
     position: relative;
     background-image: url("/images/hero-image.png");
+    /* background: no-repeat center center fixed;  */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
     padding: 2em;
     color: white;
     min-height: 400px;
