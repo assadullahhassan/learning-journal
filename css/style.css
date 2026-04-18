@@ -55,7 +55,7 @@ ul {
 
 .hero-section {
     position: relative;
-    background-image: url("/images/hero-image.png");
+    background-image: url("../images/hero-image.png");
     /* background: no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -142,9 +142,9 @@ footer p {
                 "blogthree blogfour"
                 "blogfive blogsix";
     }
-     .navbar {
+     /* .navbar {
         border: 2px solid black;
-    }
+    } */
 }
 
 @media (min-width: 970px) {
@@ -156,9 +156,9 @@ footer p {
         "blogone blogtwo blogthree"
         "blogfour blogfive blogsix";
     }
-    .navbar {
+    /* .navbar {
         border: 2px solid red;
-    }
+    } */
     .hero-section {
         min-height: 600px;
     }
@@ -173,7 +173,7 @@ footer p {
    }
    .hero-description {
     font-size: 1rem;
-    width: 100vh;
+    width: 50vw;
    }
 
    main {
