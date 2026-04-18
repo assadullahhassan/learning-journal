@@ -22,6 +22,7 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .logo img {
@@ -38,9 +39,27 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
 }
+
 .nav-links {
     display: flex;
     margin-right: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.bar {
+    width: 70px;
+    height: 4px;
+    background-color: black;
+    margin: 4px 0;
+    transition: 0.3s;
 }
 
 a {
@@ -50,6 +69,8 @@ a {
 ul {
     list-style-type: none;
 }
+
+
 
 /* Main content */
 
@@ -84,6 +105,8 @@ ul {
         ". blogsix .";
     margin-top: 1.5em;
 }
+
+
 
 .blogone {
    grid-area: blogone;
@@ -133,6 +156,83 @@ footer p {
     margin-top: .2em;
 }
 
+/* About Page */
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1em;
+}
+
+.user-section {
+    display: block;
+    align-items: center;
+    gap: 2em;
+   padding-top: 100px;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.recent-posts {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+.recent-post-title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.recent-post-description {
+    font-size: 1.1rem;
+}
+
+.description-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+/* Post page */
+
+.post-section {
+    display: block;
+    align-items: center;
+    gap: 2em;
+   padding-top: 100px;
+   padding-left: 1em;
+   padding-right: 1em;
+}
+
+.post-header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+}
+
+.date {
+    color: #6b7280;
+    font-size: .9rem;
+    margin-top: 0.5em;
+    order: -1;
+}
+
+.post-image {
+    width: 100%;
+    margin-top: 2em;
+    border-radius: .2em;
+}
+
+.underline {
+    border-bottom: 3px solid black;
+    width: 50%;
+    }
+
+
+
 @media(min-width: 500px) {
       .articles {
         display: grid;
@@ -142,9 +242,7 @@ footer p {
                 "blogthree blogfour"
                 "blogfive blogsix";
     }
-     /* .navbar {
-        border: 2px solid black;
-    } */
+     
 }
 
 @media (min-width: 970px) {
@@ -156,9 +254,11 @@ footer p {
         "blogone blogtwo blogthree"
         "blogfour blogfive blogsix";
     }
-    /* .navbar {
-        border: 2px solid red;
-    } */
+
+    .underline {
+    border-bottom: 3px solid black;
+    width: 50%;
+    }
     .hero-section {
         min-height: 600px;
     }
@@ -180,4 +280,54 @@ footer p {
     width: 90%;
     margin: 0 auto;
    }
+
+   .description-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+   padding-top: 100px;
+}
+
+.post-section {
+    display: block;
+    align-items: center;
+    gap: 2em;
+   padding-top: 100px;
+}
+}
+
+/* Responsive hamburger menu */
+@media (max-width: 1024px) {
+    .nav-links {
+        margin-top: 0em;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        width: 50%;
+        height: 100vh;
+        padding: 1em;
+        gap: 1.5em;
+        border: 1px solid #d1d5db;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+    .navbar {
+        position: relative;
+    }
 }

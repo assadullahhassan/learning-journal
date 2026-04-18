@@ -10,12 +10,17 @@
     <body>
 		<header>
 			 <nav class="navbar">
-             <div class="logo">
+             <a class="logo" href="index.html">
                 <img src="images/logo.png" alt="logo">
                 <p class="logo-text">My Learning Journal</p>
-            </div>
+            </a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="nav-links">
-                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link underline" href="index.html">Home</a></li>
                 <li><a class="nav-link" href="about.html">About Me</a></li>
             </ul>
         	</nav>
@@ -35,7 +40,7 @@
             
             <div class="articles">
                 <!-- Blog one -->
-                <a href="#" 
+                <a href="post.html" 
 				class="blogone" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -53,7 +58,7 @@
 
                 <!-- Blog 2 -->
                 
-                <a href="#" 
+                <a href="post.html" 
 				class="blogtwo" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -70,7 +75,7 @@
 			    </a>
 
                 <!-- Blog 3 -->
-                <a href="#" 
+                <a href="post.html" 
 				class="blogthree" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -88,7 +93,7 @@
 
                 <!-- Blog 4 -->
                 
-                <a href="#" 
+                <a href="post.html" 
 				class="blogfour" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -106,7 +111,7 @@
 
                 <!-- Blog 5 -->
 
-                <a href="#" 
+                <a href="post.html" 
 				class="blogfive" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -124,7 +129,7 @@
 
                 <!-- Blog 6 -->
 
-                <a href="#" 
+                <a href="post.html" 
 				class="blogsix" 
 				aria-label="Discover how crystals stabilize time in quantum computers">
 				<article>
@@ -145,5 +150,12 @@
 			<h3>My Learning Journal</h3>
 			<p>Copyright ©2026</p>
 		</footer>
+        <script>
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
