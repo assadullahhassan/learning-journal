@@ -11,11 +11,11 @@ A multi-page responsive blog website designed to document my journey through a f
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic elements ( <header> , <main> , <article> ,<footer> ) for accessibility
+- **HTML5**: Semantic elements ( header , main , article ,footer ) for accessibility
 - **CSS3**: Advanced styling techniques including:
-      - **CSS Grid:** For structured, multi-column post layouts.
-      - **Media Queries:** For device-specific breakpoint adjustments.
-      - **Flexbox:** For navigation alignment and small-component positioning.
+   - **CSS Grid:** For structured, multi-column post layouts.
+   - **Media Queries:** For device-specific breakpoint adjustments.
+   - **Flexbox:** For navigation alignment and small-component positioning.
 
 ## 📸 Screenshots and Demo
 
