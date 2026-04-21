@@ -12,7 +12,7 @@ body {
     align-items: center;
     margin: 0 auto;
     border: 1px solid #d1d5db;
-    padding: 0.8em;
+    padding: 0.5em;
     position: fixed;
     /* width: 100vw; */
     min-width: 100vw;
@@ -70,13 +70,17 @@ ul {
     list-style-type: none;
 }
 
+.underline-hover:hover {
+    border-bottom: 3px solid black;
+    transition: 0.3s;
+}
 
 
 /* Main content */
 
 .hero-section {
     position: relative;
-    background-image: url("../images/hero-image.png");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.png");
     /* background: no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -85,12 +89,48 @@ ul {
     padding: 2em;
     color: white;
     min-height: 400px;
+    padding-top: 100px;
 }
 
 .hero-texts {
     position: absolute;
     bottom: 30px;
     padding-right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.hero-date {
+    order: -1;
+}
+
+.article-header {
+    margin: 0;
+    padding: 0;
+}
+
+.article-header h3 {
+    margin-bottom: 0;
+    font-size: .9rem;
+    color: #6b7280;
+}
+
+.article-header h2 {
+    margin-top: 0.2em;
+    font-size: 1.5rem;
+}
+
+/* article {
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+} */
+
+article p {
+    margin-top: 0.3em;
+    font-size: 1.1rem;
+    color: #374151;
 }
 
 .articles {
@@ -103,9 +143,19 @@ ul {
         ". blogfour ."
         ". blogfive ."
         ". blogsix .";
-    margin-top: 1.5em;
+    
 }
 
+.articles a {
+    padding: 0;
+    margin: 0;
+    margin-bottom: -2.5em;
+}
+
+.articles a:hover {
+    transform: translateY(-10px);
+    transition: 0.3s;
+}
 
 
 .blogone {
@@ -137,8 +187,7 @@ article {
 
 article img {
     width: 100%;
-    border-top-left-radius: .2em;
-    border-top-right-radius: .2em;
+    border-radius: .2em;
 }
 
 footer {
@@ -231,6 +280,11 @@ footer p {
     width: 50%;
     }
 
+/* Footer */
+footer {
+    margin-top: 2.5em;
+}
+
 
 
 @media(min-width: 500px) {
@@ -264,9 +318,7 @@ footer p {
     }
 
     .hero-texts {
-        bottom: 50px;
-        /* padding-right: 40em; */
-        
+        bottom: 50px;        
    }
    .hero-title {
     font-size: 3.5rem;
@@ -301,6 +353,7 @@ footer p {
    padding-top: 100px;
 }
 }
+
 
 /* Responsive hamburger menu */
 @media (max-width: 1024px) {
